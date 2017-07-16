@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
 
-
-
-
 @Component({
   selector: 'my-app',
   template: `<h1>Hello {{name}} </h1>
@@ -16,7 +13,9 @@ import { Component } from '@angular/core';
         <li><a routerLink="/allTodo" routerLinkActive="active">List all</a></li>
       </ul>
     </nav>
-    <router-outlet></router-outlet>`,
+    <hr/>
+    <router-outlet></router-outlet>
+    `,
 })
 
 
