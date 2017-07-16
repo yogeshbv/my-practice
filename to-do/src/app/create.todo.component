@@ -1,0 +1,19 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'create-page',
+  template: `<h1>Create {{name}} </h1>
+  <table>
+    <tr>
+      <td>Enter title</td><td><input type="text"  name="name" /></td>
+    </tr>
+  </table>`,
+})
+
+
+
+export class CreateTodo  { 
+}
+
+
+
