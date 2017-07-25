@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
+import { Todos } from './todos';
+import { TodoService } from './todo-service';
 
 @Component({
   selector: 'my-app',
@@ -16,12 +18,13 @@ import { Component } from '@angular/core';
     <hr/>
     <router-outlet></router-outlet>
     `,
+    providers: [TodoService]
 })
 
 
 
 export class AppComponent  { 
-
+   constructor(private todoService: TodoService) { }
 }
 
 

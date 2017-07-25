@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { Todos } from './todos';
+import { TodoService } from './todo-service';
 
 @Component({
   selector: 'list-todo',
@@ -18,12 +21,9 @@ import { Component } from '@angular/core';
 
 export class ListTodoComponent  { 
 	name = 'To-Do App'; 
+	todos: Todos[];
 
-	todos: Todos[] = [
-		{id: 1, name: 'Gym', desc: 'Go to gym...'},
-		{id: 2, name: 'Cricket', desc: 'Playing cricket...'},
-		{id: 3, name: 'Office', desc: 'Go to office...'}
-	];
+	@Input() todo: Todos;
 }
 
 
