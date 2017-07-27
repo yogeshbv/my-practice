@@ -24,6 +24,14 @@ export class ListTodoComponent  {
 	todos: Todos[];
 
 	@Input() todo: Todos;
+
+	constructor(private todoService: TodoService) {
+		this.todoService.getTodoes()
+			.then((todos:any) => {
+				this.todos = todos;
+			});
+	}
+
 }
 
 
